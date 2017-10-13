@@ -1,7 +1,7 @@
 {
-  "name": "Parse Server Example",
-  "description": "An example Parse API server using the parse-server module",
-  "repository": "https://github.com/ParsePlatform/parse-server-example",
+  "name": "investr-android",
+  "description": "A Parse Server for Investr",
+  "repository": "https://github.com/InvestrApp/parse-server-investr",
   "logo": "https://avatars0.githubusercontent.com/u/1294580?v=3&s=200",
   "keywords": ["node", "express", "parse"],
   "env": {
@@ -11,7 +11,7 @@
     },
     "APP_ID": {
       "description": "A unique identifier for your app.",
-      "value": "invest-android"
+      "value": "investrAndroid"
     },
     "MASTER_KEY": {
       "description": "A key that overrides all permissions. Keep this secret.",
@@ -19,7 +19,7 @@
     },
     "SERVER_URL": {
       "description": "URL to connect to your Heroku instance (update with your app's name + PARSE_MOUNT)",
-      "value": "https://pure-headland-23092.herokuapp.com/parse"
+      "value": "https://investr-android.herokuapp.com/parse"
     }
   },
   "image": "heroku/nodejs",
