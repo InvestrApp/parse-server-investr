@@ -1,11 +1,11 @@
 {
-  "name": "parse-server-example",
+  "name": "investr-android",
   "version": "1.4.0",
-  "description": "An example Parse API server using the parse-server module",
+  "description": "Investr Android's App Parse Server",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ParsePlatform/parse-server-example"
+    "url": "https://github.com/InvestrApp/parse-server-investr"
   },
   "license": "MIT",
   "dependencies": {
