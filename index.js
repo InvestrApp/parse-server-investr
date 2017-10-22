@@ -11,11 +11,19 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+var pushConfig = {};
+
+if (process.env.GCM_SENDER_ID && process.env.GCM_API_KEY) {
+   pushConfig['android'] = { 
+   senderId: process.env.GCM_SENDER_ID || '873113403098',
+   apiKey: process.env.GCM_API_KEY || 'AIzaSyDupXWkkkInAjRtC8sFDYKwn1lP6AAcvT4'};
+}
+
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'investrAndroid',
-  masterKey: process.env.MASTER_KEY || 'codepath2017', //Add your master key here. Keep it secret!
+  masterKey: process.env.MASTER_KEY || 'investrParse2017', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'https://investr-android.herokuapp.com/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
