@@ -17,6 +17,13 @@ curl -X GET \
   -H "X-Parse-Master-Key: investrParse2017" \
   https://investr-android.herokuapp.com/parse/classes/GameScore
 
+curl -X POST \
+	-H "X-Parse-Application-Id: investrAndroid" \
+	-H "X-Parse-Master-Key: investrParse2017" \
+	-H "Content-Type: application/json" \
+	-d '{"where": {"deviceType": "android"}, "data": {"action": "com.example.UPDATE_STATUS", "newsItem": "Man bites dog", "name": "Vaughn", "alert": "Ricky Vaughn was injured during the game last night!"}}' \
+	https://investr-android.herokuapp.com/parse/functions/push
+
 *Access the dashboard via:*
 
 npm install -g parse-dashboard
